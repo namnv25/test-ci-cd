@@ -23,9 +23,9 @@ name: test-ci-cd
         - name: Build and PUSH DOCKER IMAGE CLIENT SERVER
           uses: docker/build-push-action@v2
           with: 
-            context: ./reactjs
-            file: ./reactjs/Dockerfile
-            builder: ${{ steps.buildx.outputs.name }}
+            context: .
+            file: ./Dockerfile
+            # builder: ${{ steps.buildx.outputs.name }}
             push: true
             tags: ${{ secrets.DOCKERHUB_USERNAME }}/simplewhale:latest 
         - name: Verify
