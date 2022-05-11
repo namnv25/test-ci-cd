@@ -8,7 +8,7 @@ services:
       context: ./reactjs
       dockerfile: Dockerfile
     ports:
-      - 120:80
+      - 132:80
     volumes:
       - .:/app
     depends_on:
@@ -22,7 +22,7 @@ services:
       context: ./nginx
     hostname: nginx
     ports:
-      - "100:80"
+      - "113:80"
     depends_on:
       - server
     networks:
