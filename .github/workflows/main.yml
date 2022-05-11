@@ -30,4 +30,4 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/reactjs-product
       - name: Verify
-        run: echo "Thành công rồi"
+        run: echo "Đã thành công"
