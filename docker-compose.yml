@@ -17,10 +17,9 @@ services:
     networks:
       - my_network
   nginx:
-    container_name: nginx
+    container_name: reactjs-nginx
     build:
       context: ./nginx
-    hostname: nginx
     ports:
       - "113:80"
     depends_on:
