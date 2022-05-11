@@ -1,0 +1,32 @@
+# newest version docker
+version: "3"
+
+services:
+  reactjs:
+    container_name: reactjs-product
+    build:
+      context: ./reactjs
+      dockerfile: Dockerfile
+    ports:
+      - 120:80
+    volumes:
+      - .:/app
+    depends_on:
+      - server
+    restart: always
+    networks:
+      - my_network
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx
+    hostname: nginx
+    ports:
+      - "100:80"
+    depends_on:
+      - server
+    networks:
+      - my_network
+networks:
+  my_network:
+    external: true
