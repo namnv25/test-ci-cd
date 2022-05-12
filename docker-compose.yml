@@ -14,8 +14,15 @@ services:
     depends_on:
       - server
     restart: always
-    networks:
-      - my_network
+
+  nextjs:
+    container_name: nextjs-product
+    build:
+      context: ./nextjs
+      dockerfile: Dockerfile
+    ports:
+      - 333:3000
+
   nginx:
     container_name: reactjs-nginx
     build:
@@ -24,8 +31,3 @@ services:
       - "113:80"
     depends_on:
       - server
-    networks:
-      - my_network
-networks:
-  my_network:
-    external: true
