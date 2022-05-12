@@ -69,10 +69,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:
-        uses: appleboy/discord-action@master
+      - uses: sarisia/actions-status-discord@v1
+        if: always()
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
-          args: The ${{ github.event_name }} event triggered first step.
-          run: echo " ĐÃ THÀNH CÔNG"
+          webhook: ${{ secrets.WEBHOOK_URL }}
