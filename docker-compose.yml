@@ -27,6 +27,8 @@ services:
     container_name: reactjs-nginx
     build:
       context: ./nginx
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "113:80"
     depends_on:
