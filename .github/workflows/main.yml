@@ -33,7 +33,7 @@ jobs:
           file: ./nextjs/Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nextjs
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nextjs-product
       - name: Verify
         run: echo "Đã thành công"
   deploy:
