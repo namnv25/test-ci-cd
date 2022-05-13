@@ -29,6 +29,12 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/reactjs-product
+      name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: ./nextjs
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nextjs-product
       - name: Verify
         run: echo "Đã thành công"
   deploy:
