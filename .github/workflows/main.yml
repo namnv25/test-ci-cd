@@ -56,9 +56,9 @@ jobs:
 
             cd test-ci-cd
 
-            # git pull
+            git pull
 
-            docker pull namnv251/nextjs-product:latest
+            # docker pull namnv251/nextjs-product:latest
 
             echo " pull soucre code success"
 
