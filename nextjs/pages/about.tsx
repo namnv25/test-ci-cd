@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <Link href="/">
-        <a>Home</a>
+        <a>Home test</a>
       </Link>
       <h1>About</h1>
       <img src="/static/about.jpg" />
