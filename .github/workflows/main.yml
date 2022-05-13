@@ -33,7 +33,7 @@ jobs:
           file: ./nextjs/Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nextjs-production
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nextjs
       - name: Verify
         run: echo "Đã thành công"
   deploy:
@@ -60,7 +60,7 @@ jobs:
 
             # git pull
 
-            docker pull namnv251/nextjs-product:latest
+            docker pull namnv251/nextjs:latest
 
             echo " pull soucre code success"
 
