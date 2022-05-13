@@ -15,8 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reactd ev test port 132
-          add network
+          123
         </a>
       </header>
     </div>
