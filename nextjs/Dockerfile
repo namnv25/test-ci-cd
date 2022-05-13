@@ -3,15 +3,15 @@ FROM node
 ENV PORT 3000
 
 # Create app directory
-RUN mkdir -p /usr/src/nextjs-app
-WORKDIR /usr/src/nextjs-app
+RUN mkdir -p /home/nextjs-app
+WORKDIR /home/nextjs-app
 
 # Installing dependencies
-COPY package*.json /usr/src/nextjs-app/
+COPY package*.json /home/nextjs-app/
 RUN npm install
 
 # Copying source files
-COPY . /usr/src/nextjs-app
+COPY . /home/nextjs-app
 
 # Building app
 RUN npm run build
