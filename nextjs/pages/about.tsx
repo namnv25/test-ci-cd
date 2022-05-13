@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <Link href="/">
-        <a>Home test</a>
+        <a>Home test docker pull image</a>
       </Link>
       <h1>About test</h1>
       <img src="/static/about.jpg" />
